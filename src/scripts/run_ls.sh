@@ -1,0 +1,929 @@
+export CUDA_VISIBLE_DEVICES=1
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 5 \
+                --top_k 2 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 5 \
+                --top_k 2 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 5 \
+                --top_k 1 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 5 \
+                --top_k 1 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 5 \
+                --top_k 1 1 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 6 \
+                --top_k 2 4 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 6 \
+                --top_k 2 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 6 \
+                --top_k 2 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 6 \
+                --top_k 1 4 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 6 \
+                --top_k 1 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 6 \
+                --top_k 1 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 5 \
+                --top_k 2 4 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 5 \
+                --top_k 2 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 5 \
+                --top_k 2 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 5 \
+                --top_k 1 4 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 5 \
+                --top_k 1 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 5 \
+                --top_k 1 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 4 \
+                --top_k 2 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 4 \
+                --top_k 2 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 4 \
+                --top_k 1 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 4 \
+                --top_k 1 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 3 \
+                --top_k 2 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 3 \
+                --top_k 3 1 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 3 \
+                --top_k 1 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 3 3 \
+                --top_k 1 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 4 \
+                --top_k 2 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 4 \
+                --top_k 2 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 4 \
+                --top_k 1 3 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
+
+python -W ignore main_mimiciv.py  --num_train_epochs 8  --modeltype 'TS_CXR_Text' \
+                --kernel_size 1 --train_batch_size 1 --eval_batch_size 8 --seed 42 \
+                --gradient_accumulation_steps 16  --num_update_bert_epochs 2 --bertcount 0 \
+                --ts_learning_rate 0.0004 --txt_learning_rate 0.00002 \
+                --notes_order 'Last' --num_of_notes 5 --max_length 1024 --layers 3\
+                --output_dir "../run/TS_CXR_Text" \
+                --embed_dim 128 \
+                --num_modalities 3 \
+                --model_name "bioLongformer"\
+                --task 'pheno-all-cxr-notes-ecg'\
+                --file_path '../Data/pheno'\
+                --num_labels 25 \
+                --num_heads 8\
+                --embed_time 64\
+                --tt_max 48\
+                --TS_mixup\
+                --mixup_level 'batch'\
+                --fp16 \
+                --irregular_learn_emb_text \
+                --irregular_learn_emb_ts \
+                --irregular_learn_emb_cxr \
+                --irregular_learn_emb_ecg \
+                --cross_method "hme" \
+                --gating_function "laplace" "softmax" \
+                --num_of_experts 2 4 \
+                --top_k 1 2 \
+                --disjoint_top_k 2 \
+                --hidden_size 512 \
+                --use_pt_text_embeddings \
+                --router_type 'joint' \
+                --reg_ts
