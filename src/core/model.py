@@ -413,7 +413,7 @@ class MULTCrossModel(nn.Module):
             elif not torch.all(text_missing == 0):
                 missing_indices, non_missing = self._missing_indices(text_missing)
                 proj_x_txt[:, non_missing, :] += self.token_type_embeddings(torch.ones((self.args.tt_max, len(non_missing)), dtype=torch.long, device=x_ts.device))
-                proj_x_txt[:, missing_indices, :] = torch.zeros((self.args.tt_max, len(missing_indices), self.args.embed_dim), dtype=torch.float16, device=x_ts.device)
+                proj_x_txt[:, missing_indices, :] = torch.zeros((self.args.tt_max, len(missing_indices), self.args.embed_dim), dtype=proj_x_txt.dtype, device=x_ts.device)
             mod_count += 1
 
         if "CXR" in self.modeltype:
@@ -435,7 +435,7 @@ class MULTCrossModel(nn.Module):
                 # proj_x_cxr = None
                 missing_indices, non_missing = self._missing_indices(cxr_missing)
                 proj_x_cxr[:, non_missing, :] += self.token_type_embeddings(mod_count * torch.ones((self.args.tt_max, len(non_missing)), dtype=torch.long, device=x_ts.device))
-                proj_x_cxr[:, missing_indices, :] = torch.zeros((self.args.tt_max, len(missing_indices), self.args.embed_dim), dtype=torch.float16, device=x_ts.device)
+                proj_x_cxr[:, missing_indices, :] = torch.zeros((self.args.tt_max, len(missing_indices), self.args.embed_dim), dtype=proj_x_cxr.dtype, device=x_ts.device)
             mod_count += 1
 
         if "ECG" in self.modeltype:
@@ -458,7 +458,7 @@ class MULTCrossModel(nn.Module):
                 # proj_x_ecg = None
                 missing_indices, non_missing = self._missing_indices(ecg_missing)
                 proj_x_ecg[:, non_missing, :] += self.token_type_embeddings(torch.ones((self.args.tt_max, len(non_missing)), dtype=torch.long, device=x_ts.device))
-                proj_x_ecg[:, missing_indices, :] = torch.zeros((self.args.tt_max, len(missing_indices), self.args.embed_dim), dtype=torch.float16, device=x_ts.device)
+                proj_x_ecg[:, missing_indices, :] = torch.zeros((self.args.tt_max, len(missing_indices), self.args.embed_dim), dtype=proj_x_ecg.dtype, device=x_ts.device)
             mod_count += 1
 
         if self.cross_method in ["self_cross", "moe", "hme"]:
